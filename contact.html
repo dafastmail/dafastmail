@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Contact Us</title>
+    <style type="text/css">
+        form {
+            display: block;
+            margin-top: 20px !important;
+            margin-bottom: 500px !important;
+        }
+
+        input,
+        textarea {
+            width: 50%;
+            padding: 8px !important;
+            font-size: 20px;
+            display: block;
+            margin-bottom: 27px !important;
+            padding: 10px;
+        }
+
+        label {
+            margin-bottom: 10px!important;
+            display: block;
+            font-weight: 700;
+        }
+
+        button {
+            padding: 10px!important;
+            width: 120px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./assets/main_style.css" title="wsite-theme-css">
+    <style type="text/css">
+        .wsite-elements div.paragraph,
+        .wsite-elements p,
+        .wsite-elements .product-block .product-title,
+        .wsite-elements .product-description,
+        .wsite-elements .wsite-form-field label,
+        .wsite-elements .wsite-form-field label,
+        #wsite-content div.paragraph,
+        #wsite-content p,
+        #wsite-content .product-block .product-title,
+        #wsite-content .product-description,
+        #wsite-content .wsite-form-field label,
+        #wsite-content .wsite-form-field label,
+        .blog-sidebar div.paragraph,
+        .blog-sidebar p,
+        .blog-sidebar .wsite-form-field label,
+        .blog-sidebar .wsite-form-field label {
+            font-family: Verdana !important;
+        }
+
+        #wsite-content div.paragraph,
+        #wsite-content p,
+        #wsite-content .product-block .product-title,
+        #wsite-content .product-description,
+        #wsite-content .wsite-form-field label,
+        #wsite-content .wsite-form-field label,
+        .blog-sidebar div.paragraph,
+        .blog-sidebar p,
+        .blog-sidebar .wsite-form-field label,
+        .blog-sidebar .wsite-form-field label {}
+
+        .wsite-elements h2,
+        .wsite-elements .product-long .product-title,
+        .wsite-elements .product-large .product-title,
+        .wsite-elements .product-small .product-title,
+        #wsite-content h2,
+        #wsite-content .product-long .product-title,
+        #wsite-content .product-large .product-title,
+        #wsite-content .product-small .product-title,
+        .blog-sidebar h2 {
+            font-family: Verdana !important;
+        }
+
+        #wsite-content h2,
+        #wsite-content .product-long .product-title,
+        #wsite-content .product-large .product-title,
+        #wsite-content .product-small .product-title,
+        .blog-sidebar h2 {}
+
+        #wsite-title {
+            font-family: Verdana !important;
+        }
+    </style>
+</head>
+
+<body class="wsite-theme-light no-header-page wsite-page-index" data-new-gr-c-s-check-loaded="14.1027.0"
+    data-gr-ext-installed="">
+    <div id="header-wrap">
+        <div id="header-top">
+            <table id="header">
+                <tbody>
+                    <tr>
+                        <td id="logo"><span class="wsite-logo"><span class="wsite-title-placeholder">&nbsp;</span><span
+                                    style="display:none">&nbsp;</span></span></td>
+                        <td id="header-right">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="phone-number"></td>
+                                        <td class="social"></td>
+                                        <td class="search"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="clear:both"></div>
+            <div id="navigation">
+                <ul class="wsite-menu-default">
+                    <li id="pg493975095215791228" class="wsite-nav-0" style="position: relative;"><a href="/"
+                            style="position: relative;">Home</a></li>
+                    <li id="active" class="wsite-nav-1" style="position: relative;"><a
+                            href="/contact.html" style="position: relative;">Contact</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="main-wrap">
+        <div id="main">
+            <div id="banner">
+                <div class="wsite-header"></div>
+            </div>
+            <div id="content">
+                <h2>Contact Us</h2>
+
+
+                <form id="my-form" action="https://formspree.io/f/mgerrwvw" method="POST">
+                    <label>Email:</label>
+                    <input type="email" name="email" />
+                    <label>Message:</label>
+                    <textarea name="message" rows="12"></textarea>
+                    <button id="my-form-button">Submit</button>
+                    <p id="my-form-status"></p>
+                </form>
+                <!-- Place this script at the end of the body tag -->
+                <script>
+                    var form = document.getElementById("my-form");
+
+                    async function handleSubmit(event) {
+                        event.preventDefault();
+                        var status = document.getElementById("my-form-status");
+                        var data = new FormData(event.target);
+                        fetch(event.target.action, {
+                            method: form.method,
+                            body: data,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        }).then(response => {
+                            status.innerHTML = "Thanks for your submission!";
+                            form.reset()
+                        }).catch(error => {
+                            status.innerHTML = "Oops! There was a problem submitting your form"
+                        });
+                    }
+                    form.addEventListener("submit", handleSubmit)
+                </script>
+            </div>
+        </div>
+    </div>
+    <div id="footer-wrap">
+        <div id="footer">
+            <div class="wsite-elements wsite-footer">
+                <div>
+                    <div class="wsite-multicol">
+                        <div class="wsite-multicol-table-wrap" style="margin:0 -15px">
+                            <table class="wsite-multicol-table">
+                                <tbody class="wsite-multicol-tbody">
+                                    <tr class="wsite-multicol-tr">
+                                        <td class="wsite-multicol-col" style="width:50%;padding:0 15px"></td>
+                                        <td class="wsite-multicol-col" style="width:50%;padding:0 15px"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="wsite-menus"></div>
+</body>
+
+</html>
